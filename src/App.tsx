@@ -1,23 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { useState } from "react";
 
 function App() {
+  var [counter, setCounter] = useState(0);
+  
+    setInterval(() => {
+     counter++
+     setCounter(counter);
+    }, 1000)
+
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+         <div>
+           <label>counter</label>
+            <h1>{counter}</h1>
+         </div>
       </header>
     </div>
   );
